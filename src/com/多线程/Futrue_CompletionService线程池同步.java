@@ -20,7 +20,7 @@ import com.多线程.ext.CallableTask;
  * @author wicks
  *
  */
-public class FutrueExecutors {
+public class Futrue_CompletionService线程池同步 {
     
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         ExecutorService executor = Executors.newFixedThreadPool(10);
