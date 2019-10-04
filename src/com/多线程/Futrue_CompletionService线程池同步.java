@@ -3,6 +3,7 @@ package com.多线程;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionService;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorCompletionService;
@@ -13,6 +14,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.TimeUnit;
 
 import com.多线程.ext.CallableTask;
+import com.多线程.ext.SupplierTask;
 
 
 /**
@@ -54,6 +56,13 @@ public class Futrue_CompletionService线程池同步 {
                 future.cancel(true);
             }
         }
+        
+        // CompletionFture实现
+        SupplierTask supplierTask1 = new SupplierTask("stask1", 1000);
+        SupplierTask supplierTask2 = new SupplierTask("stask2", 100);
+        CompletableFuture<String> completableFuture1 = CompletableFuture.supplyAsync(supplierTask1, executor);
+        CompletableFuture<String> completableFuture2 = CompletableFuture.supplyAsync(supplierTask2, executor);
+        CompletableFuture.allOf(completableFuture1, completableFuture2).get();
         
         // 自建BlockingQueue队列
         Future<String> future1 = executor.submit(task1);
