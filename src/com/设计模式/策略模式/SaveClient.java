@@ -1,5 +1,5 @@
 package com.设计模式.策略模式;
-//环境
+//具体的执行人（又称为环境上下文）
 public class SaveClient {
 	private ISaveData saveData;
 	public SaveClient(ISaveData saveData){
