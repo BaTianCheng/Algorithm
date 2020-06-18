@@ -1,6 +1,6 @@
 package com.设计模式.状态模式;
 //具体状态
-public enum SaveBigData implements ISaveData{
+public enum SaveBigData implements State{
 	instance;
 	@Override
 	public void save(Object data) {

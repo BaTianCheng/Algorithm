@@ -1,15 +1,17 @@
 package com.设计模式.状态模式;
 //环境（Context）
-public class SaveDataController {
-	private ISaveData saveData;
+public class DataContext {
+	private State saveData;
 	public void save(String data){
-		//为了演示，此处的大的数据其实也是很小的
-		if(data.length()<1<<2)
+		if(data.length()<1<<2) {
 			saveData = SaveSmallData.instance;
-		else if(data.length()<1<<4)
+		}
+		else if(data.length()<1<<4) {
 			saveData = SaveMiddleData.instance;
-		else
+		}
+		else {
 			saveData = SaveBigData.instance;
+		}
 		saveData.save(data);
 	}
 }
