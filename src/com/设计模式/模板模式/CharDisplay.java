@@ -1,4 +1,4 @@
-package com.设计模式.模板方法;
+package com.设计模式.模板模式;
 
 public class CharDisplay extends AbstractDisplay {  // CharDisplay是AbstractDisplay的子类 
     private char ch;                                // 需要显示的字符

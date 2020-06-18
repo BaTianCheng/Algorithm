@@ -1,4 +1,4 @@
-package com.设计模式.模板方法;
+package com.设计模式.模板模式;
 
 public class StringDisplay extends AbstractDisplay {    // StringDisplay也是AbstractDisplay的子类 
     private String string;                              // 需要显示的字符串

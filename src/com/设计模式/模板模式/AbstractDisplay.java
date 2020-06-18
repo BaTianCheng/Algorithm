@@ -1,4 +1,4 @@
-package com.设计模式.模板方法;
+package com.设计模式.模板模式;
 
 public abstract class AbstractDisplay { // 抽象类AbstractDisplay
     public abstract void open();        // 交给子类去实现的抽象方法(1) open
