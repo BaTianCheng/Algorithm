@@ -1,5 +1,12 @@
 package com.设计模式.享元模式;
-public class TestUse {
+
+/**
+ * 享元模式
+ * 享元模式是共享同样的元素，不需要每次创建
+ * @author wicks
+ *
+ */
+public class Main {
 	public static void main(String args[]){
 		WeatherFactory factory = new WeatherFactory();
 		IWeather weather1,weather2,weather3,weather4,weather5,weather6,weather7,weather8;

@@ -1,11 +1,18 @@
 package com.设计模式.命令模式;
-public class TestUse {
+
+/**
+ * 命令模式
+ * @author wicks
+ *
+ */
+public class Main {
 	public static void main(String args[]) throws Exception{
 		//接收者
 		MakeFile makeFile = new MakeFile();
 		//命令
 		CommandCreate create = new CommandCreate(makeFile);
 		CommandDelete delete = new CommandDelete(makeFile);
+		
 		//请求者
 		Client client = new Client();
 		//执行命令

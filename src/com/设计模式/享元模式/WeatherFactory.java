@@ -14,7 +14,9 @@ public class WeatherFactory {
 			flyweight = objectWeather;
 			weathers.put(objectWeather, flyweight);
 		}
-		else objectWeather = null;//方便gc回收
+		else {
+		    objectWeather = null;//方便gc回收
+		}
 		return flyweight;
 	}
 	public int getFlyweightSize(){
